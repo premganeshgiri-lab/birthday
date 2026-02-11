@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday, Priya!</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to bottom, #ffe6f2, #ffb3d9);
+            color: #333;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            text-align: center;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        h1 {
+            font-size: 3em;
+            color: #d63384;
+            margin-top: 50px;
+        }
+        p {
+            font-size: 1.2em;
+            line-height: 1.6;
+        }
+        .gifts {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin: 30px 0;
+        }
+        .gift {
+            margin: 10px;
+            width: 200px;
+            height: 200px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.3s;
+        }
+        .gift:hover {
+            transform: scale(1.05);
+        }
+        .gift img {
+            max-width: 100%;
+            max-height: 100%;
+            border-radius: 10px;
+        }
+        button {
+            background: #d63384;
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+        button:hover {
+            background: #b02a6a;
+        }
+        .petal {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: url('https://via.placeholder.com/20x20/ff69b4?text=🌸') no-repeat center;
+            animation: fall 5s linear infinite;
+        }
+        @keyframes fall {
+            0% { top: -20px; opacity: 1; }
+            100% { top: 100vh; opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Happy Birthday, Priya! 🎉</h1>
+        <p>Even though we're miles apart in this distance relationship, my love for you is as close as ever. I wish you a day filled with joy, laughter, and all the sweetness you deserve.</p>
+        <p>Here's a virtual bouquet of flowers and a box of chocolates just for you. Click below to unwrap them!</p>
+        
+        <div class="gifts">
+            <div class="gift" id="flowers">
+                <img src="https://images.unsplash.com/photo-1518709268805-4e9042af2176?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Beautiful Flowers">
+            </div>
+            <div class="gift" id="chocolates">
+                <img src="https://images.unsplash.com/photo-1606312619070-d48b4c652a52?ixlib=rb-4.0.3&auto=format&fit=crop&w=300&q=80" alt="Delicious Chocolates">
+            </div>
+        </div>
+        
+        <button onclick="unwrapGifts()">Unwrap Your Gifts!</button>
+        
+        <p>With all my love, from afar. Can't wait to celebrate with you soon! 💕</p>
+    </div>
+
+    <script>
+        function unwrapGifts() {
+            alert("Happy Birthday, Priya! Imagine these flowers blooming in your room and chocolates melting in your mouth. I love you!");
+        }
+
+        // Falling petals animation
+        function createPetal() {
+            const petal = document.createElement('div');
+            petal.className = 'petal';
+            petal.style.left = Math.random() * 100 + 'vw';
+            petal.style.animationDelay = Math.random() * 5 + 's';
+            document.body.appendChild(petal);
+            setTimeout(() => petal.remove(), 5000);
+        }
+        setInterval(createPetal, 300);
+    </script>
+</body>
+</html>
